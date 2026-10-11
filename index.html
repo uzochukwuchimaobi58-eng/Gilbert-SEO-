@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gilbert SEO - The Ultimate YouTube Growth Tool</title>
+    <meta name="description" content="Find YouTube niches, search keywords, discover trending channels, and get video ideas with Gilbert SEO.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .nav-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .logo-icon {
+            font-size: 32px;
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+        
+        nav a:hover {
+            opacity: 0.8;
+        }
+        
+        .cta-button {
+            background-color: #ff6b6b;
+            color: white;
+            padding: 10px 25px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        
+        .cta-button:hover {
+            background-color: #ff5252;
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 54px;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+        
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 40px;
+            opacity: 0.95;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .button-primary {
+            background-color: #ff6b6b;
+            color: white;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+        }
+        
+        .button-primary:hover {
+            background-color: #ff5252;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 107, 107, 0.6);
+        }
+        
+        .button-secondary {
+            background-color: transparent;
+            color: white;
+            padding: 15px 40px;
+            border: 2px solid white;
+            border-radius: 5px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .button-secondary:hover {
+            background-color: white;
+            color: #667eea;
+        }
+        
+        .features {
+            padding: 100px 0;
+            background-color: #f8f9fa;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 42px;
+            margin-bottom: 60px;
+            color: #333;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+        
+        .feature-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+        
+        .feature-icon {
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+        
+        .feature-card h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: #667eea;
+        }
+        
+        .feature-card p {
+            color: #666;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+        
+        .benefits {
+            padding: 100px 0;
+            background: white;
+        }
+        
+        .benefits-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        
+        .benefits-text h2 {
+            font-size: 38px;
+            margin-bottom: 30px;
+            color: #333;
+        }
+        
+        .benefit-list {
+            list-style: none;
+        }
+        
+        .benefit-list li {
+            font-size: 18px;
+            margin-bottom: 20px;
+            padding-left: 40px;
+            position: relative;
+            color: #555;
+        }
+        
+        .benefit-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+            font-size: 24px;
+        }
+        
+        .benefits-image {
+            text-align: center;
+            font-size: 120px;
+        }
+        
+        .how-it-works {
+            padding: 100px 0;
+            background-color: #f8f9fa;
+        }
+        
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+        }
+        
+        .step {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+        
+        .step-number {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            font-weight: bold;
+            margin: 0 auto 20px;
+        }
+        
+        .step h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: #333;
+        }
+        
+        .step p {
+            color: #666;
+            font-size: 16px;
+        }
+        
+        .pricing {
+            padding: 100px 0;
+            background: white;
+        }
+        
+        .pricing-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+        
+        .pricing-card {
+            background: #f8f9fa;
+            padding: 40px 30px;
+            border-radius: 10px;
+            text-align: center;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+        
+        .pricing-card:hover {
+            border-color: #667eea;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.2);
+        }
+        
+        .pricing-card.popular {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            transform: scale(1.05);
+        }
+        
+        .pricing-card h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        
+        .price {
+            font-size: 48px;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+        
+        .price-period {
+            font-size: 16px;
+            opacity: 0.8;
+        }
+        
+        .features-list {
+            list-style: none;
+            text-align: left;
+            margin: 30px 0;
+            font-size: 16px;
+        }
+        
+        .features-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+        }
+        
+        .pricing-card.popular .features-list li {
+            border-bottom-color: rgba(255,255,255,0.2);
+        }
+        
+        .pricing-button {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-top: 30px;
+        }
+        
+        .pricing-card:not(.popular) .pricing-button {
+            background: #667eea;
+            color: white;
+        }
+        
+        .pricing-card:not(.popular) .pricing-button:hover {
+            background: #764ba2;
+        }
+        
+        .pricing-card.popular .pricing-button {
+            background: white;
+            color: #667eea;
+            font-weight: bold;
+        }
+        
+        .pricing-card.popular .pricing-button:hover {
+            opacity: 0.9;
+        }
+        
+        .testimonials {
+            padding: 100px 0;
+            background-color: #f8f9fa;
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+        
+        .testimonial-card {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+        
+        .stars {
+            color: #ffc107;
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+        
+        .testimonial-text {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+        
+        .testimonial-author {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+        }
+        
+        .testimonial-role {
+            color: #999;
+            font-size: 14px;
+        }
+        
+        .cta-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+        }
+        
+        .cta-section h2 {
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+        
+        .cta-section p {
+            font-size: 20px;
+            margin-bottom: 40px;
+            opacity: 0.95;
+        }
+        
+        footer {
+            background-color: #222;
+            color: #ccc;
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            text-align: left;
+            margin-bottom: 40px;
+        }
+        
+        .footer-section h4 {
+            color: white;
+            margin-bottom: 15px;
+        }
+        
+        .footer-section a {
+            color: #ccc;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 10px;
+            transition: color 0.3s;
+        }
+        
+        .footer-section a:hover {
+            color: white;
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid #444;
+            padding-top: 20px;
+            text-align: center;
+            color: #999;
+        }
+        
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 36px;
+            }
+            
+            .hero p {
+                font-size: 16px;
+            }
+            
+            .section-title {
+                font-size: 28px;
+            }
+            
+            .benefits-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .pricing-card.popular {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <header>
+        <div class="container">
+            <div class="nav-bar">
+                <div class="logo">
+                    <span class="logo-icon">🎬</span>
+                    Gilbert SEO
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#how-it-works">How It Works</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <button class="cta-button">Get Started</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Grow Your YouTube Channel with Gilbert SEO</h1>
+            <p>Find profitable niches, discover trending keywords, analyze competitor channels, and never run out of video ideas</p>
+            <div class="hero-buttons">
+                <button class="button-primary">Start Free Trial</button>
+                <button class="button-secondary">Watch Demo</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <h2 class="section-title">Powerful Features Built for YouTubers</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🔍</div>
+                    <h3>Niche Finder</h3>
+                    <p>Discover untapped YouTube niches with high demand and low competition. Find your perfect content category with data-driven insights.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔑</div>
+                    <h3>Keyword Research</h3>
+                    <p>Search millions of keywords to find what your audience is looking for. Get search volume, competition level, and trend data in seconds.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💡</div>
+                    <h3>Video Idea Generator</h3>
+                    <p>Generate unlimited video ideas based on trending topics, keywords, and audience interests. Never face writer's block again.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📈</div>
+                    <h3>Trending Channels</h3>
+                    <p>Analyze what's working for top channels in your niche. Get insights on their content strategy, upload frequency, and growth patterns.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Competitor Analysis</h3>
+                    <p>Deep dive into competitor performance metrics. Understand their strengths and find gaps you can exploit.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⭐</div>
+                    <h3>Content Calendar</h3>
+                    <p>Plan and schedule your content with our integrated calendar. Stay organized and consistent with your upload schedule.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits">
+        <div class="container">
+            <div class="benefits-content">
+                <div class="benefits-text">
+                    <h2>Why Choose Gilbert SEO?</h2>
+                    <ul class="benefit-list">
+                        <li>Save 10+ hours per week on research</li>
+                        <li>Increase video views by up to 300%</li>
+                        <li>Data-driven decisions, not guessing</li>
+                        <li>Beginner-friendly, no technical skills needed</li>
+                        <li>Real-time trending data</li>
+                        <li>Competitor intelligence at your fingertips</li>
+                        <li>Affordable pricing for all creators</li>
+                        <li>24/7 customer support</li>
+                    </ul>
+                </div>
+                <div class="benefits-image">
+                    📱
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="container">
+            <h2 class="section-title">How It Works</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Sign Up</h3>
+                    <p>Create your free account in less than 2 minutes and gain instant access to all features.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Choose Your Niche</h3>
+                    <p>Browse through trending niches or let our AI suggest the perfect niche based on your interests.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Research Keywords</h3>
+                    <p>Search for high-potential keywords with low competition. Get complete metrics and trend forecasts.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Generate Ideas</h3>
+                    <p>Use our AI to generate unlimited video ideas based on trending topics and your chosen keywords.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">5</div>
+                    <h3>Analyze Competitors</h3>
+                    <p>Study what's working for successful channels in your niche and learn their strategies.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">6</div>
+                    <h3>Create & Scale</h3>
+                    <p>Create content with confidence knowing it's backed by data. Watch your channel grow exponentially.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <h2 class="section-title">Simple, Transparent Pricing</h2>
+            <div class="pricing-cards">
+                <div class="pricing-card">
+                    <h3>Starter</h3>
+                    <div class="price">Free</div>
+                    <div class="price-period">Forever</div>
+                    <ul class="features-list">
+                        <li>✓ Basic niche finder</li>
+                        <li>✓ 50 keyword searches/month</li>
+                        <li>✓ 10 video ideas/month</li>
+                        <li>✓ Community support</li>
+                    </ul>
+                    <button class="pricing-button">Get Started</button>
+                </div>
+                <div class="pricing-card popular">
+                    <h3>Professional</h3>
+                    <div class="price">$29</div>
+                    <div class="price-period">per month</div>
+                    <ul class="features-list">
+                        <li>✓ Advanced niche finder</li>
+                        <li>✓ Unlimited keyword searches</li>
+                        <li>✓ Unlimited video ideas</li>
+                        <li>✓ Competitor analysis</li>
+                        <li>✓ Trending channels</li>
+                        <li>✓ Priority support</li>
+                    </ul>
+                    <button class="pricing-button">Start Free Trial</button>
+                </div>
+                <div class="pricing-card">
+                    <h3>Agency</h3>
+                    <div class="price">$99</div>
+                    <div class="price-period">per month</div>
+                    <ul class="features-list">
+                        <li>✓ All Professional features</li>
+                        <li>✓ Team collaboration (5 users)</li>
+                        <li>✓ API access</li>
+                        <li>✓ Custom reports</li>
+                        <li>✓ White-label option</li>
+                        <li>✓ Dedicated account manager</li>
+                    </ul>
+                    <button class="pricing-button">Contact Sales</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">What YouTubers Are Saying</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"Gilbert SEO helped me grow from 10k to 100k subscribers in just 6 months! The keyword research feature is a game-changer."</p>
+                    <div class="testimonial-author">Sarah Chen</div>
+                    <div class="testimonial-role">Tech Reviews Channel, 125K subscribers</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"I was stuck with ideas before. Now I generate 50+ video ideas every month with Gilbert SEO. This tool is worth every penny!"</p>
+                    <div class="testimonial-author">Marcus Johnson</div>
+                    <div class="testimonial-role">Fitness Coach Channel, 45K subscribers</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"The competitor analysis feature showed me exactly what I was missing. My CTR increased by 40% in just 3 weeks!"</p>
+                    <div class="testimonial-author">Emma Williams</div>
+                    <div class="testimonial-role">Beauty & Lifestyle Channel, 200K subscribers</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Grow Your YouTube Channel?</h2>
+            <p>Start your free trial today. No credit card required. Cancel anytime.</p>
+            <button class="button-primary">Start Your Free Trial</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Product</h4>
+                    <a href="#features">Features</a>
+                    <a href="#pricing">Pricing</a>
+                    <a href="#">About</a>
+                    <a href="#">Blog</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <a href="#">Help Center</a>
+                    <a href="#">Contact Us</a>
+                    <a href="#">FAQ</a>
+                    <a href="#">Community</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <a href="#">Twitter</a>
+                    <a href="#">Facebook</a>
+                    <a href="#">Instagram</a>
+                    <a href="#">LinkedIn</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Gilbert SEO. All rights reserved. Empowering YouTube creators worldwide.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
